@@ -1,9 +1,9 @@
 # Node.js Backend Architecture Typescript Project
 ### A complete project to build a blogging platform like Medium, and FreeCodeCamp
 
-[![Docker Compose CI](https://github.com/fifocode/nodejs-backend-architecture-typescript/actions/workflows/docker_compose.yml/badge.svg)](https://github.com/fifocode/nodejs-backend-architecture-typescript/actions/workflows/docker_compose.yml)
+[![Docker Compose CI](https://github.com/afteracademy/nodejs-backend-architecture-typescript/actions/workflows/docker_compose.yml/badge.svg)](https://github.com/afteracademy/nodejs-backend-architecture-typescript/actions/workflows/docker_compose.yml)
 
-Note: This is the **latest (version 2)** of the project. If you are using **version 1** then checkout the branch [**version-1**](https://github.com/fifocode/nodejs-backend-architecture-typescript/tree/version-1)
+Note: This is the **latest (version 2)** of the project. If you are using **version 1** then checkout the branch [**version-1**](https://github.com/afteracademy/nodejs-backend-architecture-typescript/tree/version-1)
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/janishar/nodejs-backend-architecture-typescript/main/addons/github_assets/cover-nodejs-backend.png">
@@ -29,9 +29,9 @@ It is suitable for Web Apps, Mobile Apps, and other API services.
 
 # About The Author
 You can connect with us here:
-* [Website](https://fifocode.com)
-* [Twitter](https://twitter.com/fifocode)
-* [YouTube Channel](https://www.youtube.com/@fifocode)
+* [Website](https://afteracademy.com)
+* [Twitter](https://twitter.com/afteracad)
+* [YouTube Channel](https://www.youtube.com/@afteracad)
 
 # Project Instructions
 We will learn and build the backend application for a blogging platform. The main focus will be to create a maintainable and highly testable architecture.
@@ -52,26 +52,26 @@ Following are the features of this project:
 
 ## 3RE Architecture: Router, RouteHandler, ResponseHandler, ErrorHandler
 <p align="center">
-    <img src="https://raw.githubusercontent.com/fifocode/nodejs-backend-architecture-typescript/main/addons/github_assets/3RE.png">
+    <img src="https://raw.githubusercontent.com/afteracademy/nodejs-backend-architecture-typescript/main/addons/github_assets/3RE.png">
 </p>
 <br>
 
 ## Project Outline: Blogging Platform
 <p align="center">
-    <img src="https://raw.githubusercontent.com/fifocode/nodejs-backend-architecture-typescript/main/addons/github_assets/project-outline.png">
+    <img src="https://raw.githubusercontent.com/afteracademy/nodejs-backend-architecture-typescript/main/addons/github_assets/project-outline.png">
 </p>
 <br>
 
 ## Request-Response Handling Schematic Diagram
 <p align="center">
-    <img src="https://raw.githubusercontent.com/fifocode/nodejs-backend-architecture-typescript/main/addons/github_assets/api-structure.png">
+    <img src="https://raw.githubusercontent.com/afteracademy/nodejs-backend-architecture-typescript/main/addons/github_assets/api-structure.png">
 </p>
 <br>
 
 ## Learn the concepts used in this project
-* [Design Node.js Backend Architecture like a Pro](https://fifocode.com/article/design-node-js-backend-architecture-like-a-pro)
+* [Design Node.js Backend Architecture like a Pro](https://afteracademy.com/article/design-node-js-backend-architecture-like-a-pro)
 * [The video guide to build and run this project](https://youtu.be/t7blRxqPIMs)
-* [Implement JSON Web Token (JWT) Authentication using AccessToken and RefreshToken](https://fifocode.com/article/implement-json-web-token-jwt-authentication-using-access-token-and-refresh-token)
+* [Implement JSON Web Token (JWT) Authentication using AccessToken and RefreshToken](https://afteracademy.com/article/implement-json-web-token-jwt-authentication-using-access-token-and-refresh-token)
 * [TypeScript Tutorial For Beginners](https://afteracademy.com/blog/typescript-tutorial-for-beginners)
 * [From JavaScript to TypeScript](https://afteracademy.com/blog/from-javascript-to-typescript)
 
@@ -82,7 +82,7 @@ vscode is the recommended editor - dark theme
 ### Get the repo 
 ```bash
 # clone repository recursively
-git clone https://github.com/fifocode/nodejs-backend-architecture-typescript.git
+git clone https://github.com/afteracademy/nodejs-backend-architecture-typescript.git
 ```
 
 ### Run Docker Compose
@@ -378,7 +378,7 @@ $ npm test
 
 ### License
 ```
-   Copyright (C) 2025 FIFOCODE
+   Copyright (C) 2026 MINDORKS NEXTGEN PRIVATE LIMITED
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

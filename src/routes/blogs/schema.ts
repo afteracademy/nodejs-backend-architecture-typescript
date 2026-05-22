@@ -15,4 +15,7 @@ export default {
   authorId: Joi.object().keys({
     id: JoiObjectId().required(),
   }),
+  trending: Joi.object().keys({
+    limit: Joi.number().optional().integer().min(1),
+  }),
 };

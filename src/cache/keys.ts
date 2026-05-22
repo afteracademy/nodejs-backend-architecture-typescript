@@ -1,5 +1,6 @@
 export enum Key {
   BLOGS_LATEST = 'BLOGS_LATEST',
+  BLOGS_TRENDING = 'BLOGS_TRENDING',
 }
 
 export enum DynamicKey {

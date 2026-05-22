@@ -9,6 +9,7 @@ import { Types } from 'mongoose';
 import writer from './writer';
 import editor from './editor';
 import BlogCache from '../../cache/repository/BlogCache';
+import BlogTrendingCache from '../../cache/repository/BlogTrendingCache';
 
 const router = express.Router();
 
@@ -28,6 +29,10 @@ router.get(
     }
 
     if (!blog) throw new NotFoundError('Blog not found');
+
+    //Increase Blod Score/View Count
+    await BlogTrendingCache.incrementBlogView(blog._id.toString());
+
     return new SuccessResponse('success', blog).send(res);
   }),
 );
@@ -47,6 +52,9 @@ router.get(
     }
 
     if (!blog) throw new NotFoundError('Blog not found');
+
+    //Increase Blod Score/View Count - If Blog Found only
+    await BlogTrendingCache.incrementBlogView(blog._id.toString());
     return new SuccessResponse('success', blog).send(res);
   }),
 );

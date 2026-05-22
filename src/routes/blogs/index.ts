@@ -8,6 +8,7 @@ import BlogRepo from '../../database/repository/BlogRepo';
 import { Types } from 'mongoose';
 import User from '../../database/model/User';
 import BlogsCache from '../../cache/repository/BlogsCache';
+import BlogTrendingCache from '../../cache/repository/BlogTrendingCache';
 
 const router = express.Router();
 
@@ -67,6 +68,44 @@ router.get(
     }
 
     return new SuccessResponse('success', blogs ? blogs : []).send(res);
+  }),
+);
+
+// GET /blogs/trending?limit=10&pageNumber=1
+router.get(
+  '/trending',
+  validator(schema.trending, ValidationSource.QUERY),
+  asyncHandler(async (req, res) => {
+    const limit = req.query.limit ? parseInt(req.query.limit as string) : 10;
+    // const pageNumber = req.query.pageNumber
+    //   ? parseInt(req.query.pageNumber as string)
+    //   : 1;
+
+    const trending = await BlogTrendingCache.getTrendingBlogIds(limit);
+
+    const blogIds = trending.map((oneItem) => {
+      return oneItem.value;
+    });
+
+    const allBlogs = await BlogRepo.findAllBlogsByIds(blogIds);
+    const blogMap = new Map(
+      allBlogs.map((eachBlog) => [eachBlog._id.toString(), eachBlog]),
+    );
+    //Format the Obtained Data by Views counts for trending
+    const formatedResponse = trending.map((oneItem) => {
+      const blog = blogMap.get(oneItem.value);
+      if (!blog) {
+        return null;
+      }
+      return {
+        ...blog,
+        views: oneItem.score,
+      };
+    });
+    const finalResponse = formatedResponse.filter((oneBlog) => {
+      return oneBlog !== null;
+    });
+    return new SuccessResponse('success', finalResponse).send(res);
   }),
 );
 

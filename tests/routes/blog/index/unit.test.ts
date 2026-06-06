@@ -71,7 +71,7 @@ describe('BlogDetail by URL route', () => {
 
     expect(mockBlogCacheFetchByUrl).toHaveBeenCalledTimes(1);
     expect(mockBlogCacheFetchByUrl).toHaveBeenCalledWith(BLOG_URL);
-    expect(mockBlogCacheFetchByUrl).toReturnTimes(1);
+    expect(mockBlogCacheFetchByUrl).toHaveReturnedTimes(1);
 
     expect(mockPublishedBlogFindByUrl).not.toHaveBeenCalled();
     expect(mockBlogCacheSave).not.toHaveBeenCalled();
@@ -88,14 +88,14 @@ describe('BlogDetail by URL route', () => {
 
     expect(mockBlogCacheFetchByUrl).toHaveBeenCalledTimes(1);
     expect(mockBlogCacheFetchByUrl).toHaveBeenCalledWith(BLOG_2_URL);
-    expect(mockBlogCacheFetchByUrl).toReturnTimes(1);
+    expect(mockBlogCacheFetchByUrl).toHaveReturnedTimes(1);
 
     expect(mockPublishedBlogFindByUrl).toHaveBeenCalledTimes(1);
     expect(mockPublishedBlogFindByUrl).toHaveBeenCalledWith(BLOG_2_URL);
-    expect(mockPublishedBlogFindByUrl).toReturnTimes(1);
+    expect(mockPublishedBlogFindByUrl).toHaveReturnedTimes(1);
 
     expect(mockBlogCacheSave).toHaveBeenCalledTimes(1);
-    expect(mockBlogCacheSave).toReturnTimes(1);
+    expect(mockBlogCacheSave).toHaveReturnedTimes(1);
   });
 });
 
@@ -136,7 +136,7 @@ describe('BlogDetail by id route', () => {
 
     expect(mockBlogCacheFetchById).toHaveBeenCalledTimes(1);
     expect(mockBlogCacheFetchById).toHaveBeenCalledWith(BLOG_ID);
-    expect(mockBlogCacheFetchById).toReturnTimes(1);
+    expect(mockBlogCacheFetchById).toHaveReturnedTimes(1);
 
     expect(mockPublishedBlogFindById).not.toHaveBeenCalled();
     expect(mockBlogCacheSave).not.toHaveBeenCalled();
@@ -153,13 +153,13 @@ describe('BlogDetail by id route', () => {
 
     expect(mockBlogCacheFetchById).toHaveBeenCalledTimes(1);
     expect(mockBlogCacheFetchById).toHaveBeenCalledWith(BLOG_2_ID);
-    expect(mockBlogCacheFetchById).toReturnTimes(1);
+    expect(mockBlogCacheFetchById).toHaveReturnedTimes(1);
 
     expect(mockPublishedBlogFindById).toHaveBeenCalledTimes(1);
     expect(mockPublishedBlogFindById).toHaveBeenCalledWith(BLOG_2_ID);
-    expect(mockPublishedBlogFindById).toReturnTimes(1);
+    expect(mockPublishedBlogFindById).toHaveReturnedTimes(1);
 
     expect(mockBlogCacheSave).toHaveBeenCalledTimes(1);
-    expect(mockBlogCacheSave).toReturnTimes(1);
+    expect(mockBlogCacheSave).toHaveReturnedTimes(1);
   });
 });

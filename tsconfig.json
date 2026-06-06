@@ -11,12 +11,12 @@
     "noImplicitThis": false,
     "resolveJsonModule": true,
     "sourceMap": true,
-    "rootDir": "./src",
+    "rootDir": ".",
     "outDir": "./build",
     "paths": {
       "*": ["./src/types/*"]
     },
-    "types": ["node"],
+    "types": ["node", "jest"],
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -27,5 +27,5 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*", "./tests/**/*"]
 }

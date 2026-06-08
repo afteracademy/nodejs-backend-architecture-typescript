@@ -15,7 +15,7 @@ import profile from './profile';
 const router = express.Router();
 
 /*---------------------------------------------------------*/
-router.use('health', health);
+router.use('/health', health);
 /*---------------------------------------------------------*/
 router.use(apikey);
 /*---------------------------------------------------------*/

@@ -185,6 +185,24 @@ async function searchLike(query: string, limit: number): Promise<Blog[]> {
     .exec();
 }
 
+async function findTrendingBlogs(
+  pageNumber: number,
+  limit: number,
+): Promise<Blog[]> {
+  return BlogModel.find({ status: true, isPublished: true })
+    .skip(limit * (pageNumber - 1))
+    .limit(limit)
+    .sort({ score: -1 })
+    .populate('author', AUTHOR_DETAIL)
+    .lean()
+    .exec();
+}
+async function findAllBlogsByIds(ids: string[]): Promise<Blog[]> {
+  return BlogModel.find({ _id: { $in: ids }, status: true, isPublished: true })
+    .select('-status -description')
+    .lean()
+    .exec();
+}
 export default {
   create,
   update,
@@ -205,4 +223,6 @@ export default {
   searchSimilarBlogs,
   search,
   searchLike,
+  findTrendingBlogs,
+  findAllBlogsByIds,
 };

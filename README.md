@@ -144,6 +144,10 @@ $ npm test
 
 ## API DOC
 [![API Documentation](https://img.shields.io/badge/API%20Documentation-View%20Here-blue?style=for-the-badge)](https://documenter.getpostman.com/view/1552895/2s8Z6u4a6N)
+
+## Learn To Deploy This API Service On Amazon EC2 - YouTube Video
+[![YouTube Video](https://img.shields.io/badge/YouTube%20Video-Watch%20Here-red?style=for-the-badge)](https://youtu.be/wQ0SHBX_hlY?si=F1QA_6mGWd52XOT1)
+
   
 ## Learn Backend Development From Our Videos
   * [Introduction to Web Backend Development for Beginners](https://youtu.be/SikmqyFocKQ)

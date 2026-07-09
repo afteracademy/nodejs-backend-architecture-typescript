@@ -83,3 +83,11 @@ jest.mock('../../../../src/database/repository/BlogRepo', () => ({
   findPublishedByUrl: mockPublishedBlogFindByUrl,
   findInfoForPublishedById: mockPublishedBlogFindById,
 }));
+
+jest.mock('../../../../src/cache/repository/BlogTrendingCache', () => ({
+  __esModule: true,
+  default: {
+    incrementBlogView: jest.fn().mockResolvedValue(1),
+    getTrendingBlogIds: jest.fn().mockResolvedValue([]),
+  },
+}));

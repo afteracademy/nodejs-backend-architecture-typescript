@@ -55,7 +55,7 @@ export async function setList(
   expireAt: Date | null = null,
 ) {
   const multi = cache.multi();
-  const values: any[] = []
+  const values: any[] = [];
   for (const i in list) {
     values[i] = JSON.stringify(list[i]);
   }

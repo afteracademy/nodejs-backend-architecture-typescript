@@ -15,4 +15,7 @@ export default {
   authorId: z.object({
     id: zObjectId(),
   }),
+  trending: Joi.object().keys({
+    limit: Joi.number().optional().integer().min(1),
+  }),
 };

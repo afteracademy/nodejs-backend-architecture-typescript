@@ -152,6 +152,6 @@ schema.index({ _id: 1, status: 1 });
 schema.index({ blogUrl: 1, status: 1 });
 schema.index({ isPublished: 1, status: 1 });
 schema.index({ _id: 1, isPublished: 1, status: 1 });
-schema.index({ tag: 1, isPublished: 1, status: 1 });
+schema.index({ tags: 1, isPublished: 1, status: 1 });
 
 export const BlogModel = model<Blog>(DOCUMENT_NAME, schema, COLLECTION_NAME);
